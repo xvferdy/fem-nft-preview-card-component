@@ -1,0 +1,41 @@
+@use "./colors" as *;
+@use "./breakpoints" as *;
+@use "./fonts" as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	font-family: $primary-font;
+	transition: 0.3s ease;
+	// border: 1px solid gray;
+	// overflow-x: hidden;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: $very-dark-blue-main;
+}
+
+p {
+	font-size: 18px;
+}
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include display(mobile) {
+		padding: 0 24px;
+		.card__content__title,
+		.card__content__sub-title,
+		.card__content__nft-info,
+		.card__content__creator {
+			margin-bottom: 4px;
+		}
+	}
+}

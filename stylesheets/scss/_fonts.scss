@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$primary-font: "Outfit", sans-serif;
+
+$font-weights: (
+	"regular": 300,
+	"medium": 400,
+	"bold": 600,
+);
+
+$line-height: (
+	"title": 28px,
+	"sub-title": 26px,
+	"others": 19px,
+);

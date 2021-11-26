@@ -1,0 +1,104 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+.card {
+	max-width: 350px;
+	padding: 24px;
+	background-color: $very-dark-blue-card;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+
+	.img-heading {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 24px;
+		// background-color: $cyan;
+		img {
+			// transform: scale(1.5);
+			width: 100%;
+			cursor: pointer;
+			border-radius: 8px;
+
+			&:hover {
+				// mix-blend-mode: multiply;
+				// transform: scale(2);
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		&__title {
+			font-size: 22px;
+			color: $white;
+			line-height: map-get($line-height, title);
+			margin-bottom: 8px;
+			cursor: pointer;
+			&:hover {
+				color: $cyan;
+			}
+		}
+		&__sub-title {
+			color: $soft-blue;
+			line-height: map-get($line-height, sub-title);
+			font-weight: map-get($font-weights, regular);
+			margin-bottom: 8px;
+		}
+		&__nft-info {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 8px;
+			.nft-info__price,
+			.nft-info__time-left {
+				display: flex;
+				justify-content: space-between;
+				gap: 7px;
+				align-items: center;
+			}
+			.nft-info__price {
+				p {
+					font-size: 15px;
+					color: $cyan;
+					font-weight: map-get($font-weights, bold);
+				}
+			}
+			.nft-info__time-left {
+				p {
+					font-size: 15px;
+					color: $soft-blue;
+					font-weight: map-get($font-weights, bold);
+				}
+			}
+		}
+		.divider {
+			height: 1px;
+			background-color: $very-dark-blue-line;
+		}
+		&__creator {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 16px;
+			margin-bottom: 8px;
+			img {
+				width: 33px;
+				border: 1px solid $white;
+				border-radius: 50%;
+			}
+			p {
+				font-size: 15px;
+				color: $soft-blue;
+				a {
+					color: $white;
+					text-decoration: none;
+					&:hover {
+						color: $cyan;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @use "./fonts" as *;
+@use "./breakpoints" as *;
 
 .card {
 	max-width: 350px;
@@ -25,6 +26,9 @@
 				// transform: scale(2);
 			}
 		}
+		@include display(mobile) {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__content {
@@ -35,7 +39,6 @@
 			font-size: 22px;
 			color: $white;
 			line-height: map-get($line-height, title);
-			margin-bottom: 8px;
 			cursor: pointer;
 			&:hover {
 				color: $cyan;
@@ -46,6 +49,10 @@
 			line-height: map-get($line-height, sub-title);
 			font-weight: map-get($font-weights, regular);
 			margin-bottom: 8px;
+			@include display(mobile) {
+				font-size: 16px;
+				margin-bottom: 0;
+			}
 		}
 		&__nft-info {
 			display: flex;
@@ -72,8 +79,11 @@
 					font-weight: map-get($font-weights, bold);
 				}
 			}
+			@include display(mobile) {
+				margin-bottom: 0;
+			}
 		}
-		.divider {
+		&__divider {
 			height: 1px;
 			background-color: $very-dark-blue-line;
 		}
@@ -82,7 +92,7 @@
 			justify-content: flex-start;
 			align-items: center;
 			gap: 16px;
-			margin-bottom: 8px;
+			margin-bottom: 4px;
 			img {
 				width: 33px;
 				border: 1px solid $white;

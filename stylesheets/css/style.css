@@ -28,12 +28,6 @@ p {
   .container {
     padding: 0 24px;
   }
-  .container .card__content__title,
-.container .card__content__sub-title,
-.container .card__content__nft-info,
-.container .card__content__creator {
-    margin-bottom: 4px;
-  }
 }
 
 .card {
@@ -54,6 +48,11 @@ p {
   cursor: pointer;
   border-radius: 8px;
 }
+@media only screen and (max-width: 375px) {
+  .card .img-heading {
+    margin-bottom: 16px;
+  }
+}
 .card__content {
   display: flex;
   flex-direction: column;
@@ -63,7 +62,6 @@ p {
   font-size: 22px;
   color: white;
   line-height: 28px;
-  margin-bottom: 8px;
   cursor: pointer;
 }
 .card__content__title:hover {
@@ -74,6 +72,12 @@ p {
   line-height: 26px;
   font-weight: 300;
   margin-bottom: 8px;
+}
+@media only screen and (max-width: 375px) {
+  .card__content__sub-title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
 }
 .card__content__nft-info {
   display: flex;
@@ -97,7 +101,12 @@ p {
   color: #8bacda;
   font-weight: 600;
 }
-.card__content .divider {
+@media only screen and (max-width: 375px) {
+  .card__content__nft-info {
+    margin-bottom: 0;
+  }
+}
+.card__content__divider {
   height: 1px;
   background-color: #2f415b;
 }
@@ -106,7 +115,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .card__content__creator img {
   width: 33px;

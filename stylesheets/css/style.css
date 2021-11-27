@@ -38,18 +38,46 @@ p {
   flex-direction: column;
   border-radius: 15px;
 }
-.card .img-heading {
+.card__hero {
+  position: relative;
   width: 100%;
   overflow: hidden;
   margin-bottom: 24px;
-}
-.card .img-heading img {
-  width: 100%;
+  display: grid;
+  place-items: center;
   cursor: pointer;
+}
+.card__hero .cube {
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
+.card__hero .eye {
+  opacity: 0;
+  position: absolute;
+  border-radius: 8px;
+  transition: 0.3s opacity ease;
+}
+.card__hero::before {
+  content: "";
+  opacity: 0;
+  background-color: #00fff7;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s opacity ease;
+}
+.card__hero:hover .eye {
+  opacity: 1;
+}
+.card__hero:hover::before {
+  opacity: 0.5;
+}
 @media only screen and (max-width: 375px) {
-  .card .img-heading {
+  .card__hero {
     margin-bottom: 16px;
   }
 }

@@ -6,10 +6,13 @@
 - [x] mobile view
 
 **susah**
-- [ ] img hover effect
+- [x] img hover effect
 - [ ] sticky footer
 
 **di luar project**
 - [ ] readme-template
+- [ ] tanya:
+    - [ ] waktu penyelesaian x jam, apakah normal
+    - [ ] ect
 
 # //

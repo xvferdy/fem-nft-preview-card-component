@@ -28,12 +28,6 @@ p {
   .container {
     padding: 0 24px;
   }
-  .container .card__content__title,
-.container .card__content__sub-title,
-.container .card__content__nft-info,
-.container .card__content__creator {
-    margin-bottom: 4px;
-  }
 }
 
 .card {
@@ -44,15 +38,48 @@ p {
   flex-direction: column;
   border-radius: 15px;
 }
-.card .img-heading {
+.card__hero {
+  position: relative;
   width: 100%;
   overflow: hidden;
   margin-bottom: 24px;
-}
-.card .img-heading img {
-  width: 100%;
+  display: grid;
+  place-items: center;
   cursor: pointer;
+}
+.card__hero .cube {
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
+}
+.card__hero .eye {
+  opacity: 0;
+  position: absolute;
+  border-radius: 8px;
+  transition: 0.3s opacity ease;
+}
+.card__hero::before {
+  content: "";
+  opacity: 0;
+  background-color: #00fff7;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s opacity ease;
+}
+.card__hero:hover .eye {
+  opacity: 1;
+}
+.card__hero:hover::before {
+  opacity: 0.5;
+}
+@media only screen and (max-width: 375px) {
+  .card__hero {
+    margin-bottom: 16px;
+  }
 }
 .card__content {
   display: flex;
@@ -63,7 +90,6 @@ p {
   font-size: 22px;
   color: white;
   line-height: 28px;
-  margin-bottom: 8px;
   cursor: pointer;
 }
 .card__content__title:hover {
@@ -74,6 +100,12 @@ p {
   line-height: 26px;
   font-weight: 300;
   margin-bottom: 8px;
+}
+@media only screen and (max-width: 375px) {
+  .card__content__sub-title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
 }
 .card__content__nft-info {
   display: flex;
@@ -97,7 +129,12 @@ p {
   color: #8bacda;
   font-weight: 600;
 }
-.card__content .divider {
+@media only screen and (max-width: 375px) {
+  .card__content__nft-info {
+    margin-bottom: 0;
+  }
+}
+.card__content__divider {
   height: 1px;
   background-color: #2f415b;
 }
@@ -106,7 +143,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .card__content__creator img {
   width: 33px;

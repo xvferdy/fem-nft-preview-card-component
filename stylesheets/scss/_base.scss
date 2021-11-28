@@ -10,8 +10,6 @@
 	box-sizing: inherit;
 	font-family: $primary-font;
 	transition: 0.3s ease;
-	// border: 1px solid gray;
-	// overflow-x: hidden;
 }
 
 body {
@@ -31,11 +29,5 @@ p {
 
 	@include display(mobile) {
 		padding: 0 24px;
-		.card__content__title,
-		.card__content__sub-title,
-		.card__content__nft-info,
-		.card__content__creator {
-			margin-bottom: 4px;
-		}
 	}
 }

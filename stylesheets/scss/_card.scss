@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @use "./fonts" as *;
+@use "./breakpoints" as *;
 
 .card {
 	max-width: 350px;
@@ -8,25 +9,49 @@
 	display: flex;
 	flex-direction: column;
 	border-radius: 15px;
-
-	.img-heading {
+	&__hero {
+		position: relative;
 		width: 100%;
 		overflow: hidden;
 		margin-bottom: 24px;
-		// background-color: $cyan;
-		img {
-			// transform: scale(1.5);
+		display: grid;
+		place-items: center;
+		cursor: pointer;
+		.cube {
 			width: 100%;
-			cursor: pointer;
+			height: 100%;
 			border-radius: 8px;
-
-			&:hover {
-				// mix-blend-mode: multiply;
-				// transform: scale(2);
+		}
+		.eye {
+			opacity: 0;
+			position: absolute;
+			border-radius: 8px;
+			transition: 0.3s opacity ease;
+		}
+		&::before {
+			content: "";
+			opacity: 0;
+			background-color: $cyan;
+			border-radius: 8px;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: 0.3s opacity ease;
+		}
+		&:hover {
+			.eye {
+				opacity: 1;
+			}
+			&::before {
+				opacity: 0.5;
 			}
 		}
+		@include display(mobile) {
+			margin-bottom: 16px;
+		}
 	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -35,7 +60,6 @@
 			font-size: 22px;
 			color: $white;
 			line-height: map-get($line-height, title);
-			margin-bottom: 8px;
 			cursor: pointer;
 			&:hover {
 				color: $cyan;
@@ -46,6 +70,10 @@
 			line-height: map-get($line-height, sub-title);
 			font-weight: map-get($font-weights, regular);
 			margin-bottom: 8px;
+			@include display(mobile) {
+				font-size: 16px;
+				margin-bottom: 0;
+			}
 		}
 		&__nft-info {
 			display: flex;
@@ -72,8 +100,11 @@
 					font-weight: map-get($font-weights, bold);
 				}
 			}
+			@include display(mobile) {
+				margin-bottom: 0;
+			}
 		}
-		.divider {
+		&__divider {
 			height: 1px;
 			background-color: $very-dark-blue-line;
 		}
@@ -82,7 +113,7 @@
 			justify-content: flex-start;
 			align-items: center;
 			gap: 16px;
-			margin-bottom: 8px;
+			margin-bottom: 4px;
 			img {
 				width: 33px;
 				border: 1px solid $white;

@@ -4,7 +4,7 @@
 - [ ] does card have shadow?
 - [ ] hapus useless code
 - [x] mobile view
-- [ ] pr
+- [x] pr
 - [x] submit solution
 
 **susah**

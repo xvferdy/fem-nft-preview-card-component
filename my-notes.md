@@ -4,6 +4,8 @@
 - [ ] does card have shadow?
 - [ ] hapus useless code
 - [x] mobile view
+- [ ] pr
+- [x] submit solution
 
 **susah**
 - [x] img hover effect

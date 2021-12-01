@@ -69,5 +69,3 @@ Instead of doing a `margin bottom` on each element I create a `gap` property on 
 <h3 align="right">
       <a href="#nft-preview-card-component">To Top ⤴️</a>
 </h3>
-
-# 🐎   <p align="center">🏃 🏃 🏃‍♀️</p>  <p align="right">🚴‍♀️</p>

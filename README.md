@@ -34,8 +34,8 @@ Users should be able to:
 | See hover states for interactive elements | ⭕ |  |  |  |
 
 ### Links
-- Solution URL: [Add solution URL here]()
-- Live Site URL: Add live site URL here
+- Solution URL: https://www.frontendmentor.io/solutions/femnftpreviewcardcomponent-aRajKeUGP
+- Live Site URL: https://xvferdy.github.io/fem-nft-preview-card-component/
 
 ## My process
 > ⏱️ My estimate time for this challenge is 2 days

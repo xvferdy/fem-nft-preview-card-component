@@ -66,5 +66,5 @@ Instead of doing a `margin bottom` on each element I create a `gap` property on 
 | [<samp>Frontend Mentor<samp>](https://www.frontendmentor.io/profile/xvferdy) | 
 
 <h3 align="right">
-      <a href="#base-apparel-coming-soon-page">To Top ⤴️</a>
+      <a href="#nft-preview-card-component">To Top ⤴️</a>
 </h3>
